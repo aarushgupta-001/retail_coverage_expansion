@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Gap and Cluster Map - Surat</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/lib/leaflet/leaflet.css">
+    <link rel="stylesheet" href="./js/lib/nouislider/nouislider.min.css">
+
+    <script src="./js/lib/leaflet/leaflet.js"></script>
+    <script src="./js/lib/nouislider/nouislider.min.js"></script>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div id="viewButtons" class="northcenter">
+    <button onclick="switchToClusterView()">Cluster View</button>
+    <button onclick="switchToRetailGapView()">Retail Gap View</button>
+</div>
+
+<div id="opacitySliderBox" class="northwest">
+    <h4>Grid Opacity</h4>
+    <div id="opacitySlider"></div>
+</div>
+
+<div id="outletCheckboxBox" class="northeast">
+    <h4>Outlet Types</h4>
+
+    <label><input type="checkbox" id="independentOutletCheckbox" checked><span id="independentLabel"></span></label>
+    <label><input type="checkbox" id="cigaretteOutletCheckbox" checked><span id="cigaretteLabel"></span></label>
+    <label><input type="checkbox" id="foodOutletCheckbox" checked><span id="foodLabel"></span></label>
+    <label><input type="checkbox" id="pcpOutletCheckbox" checked><span id="pcpLabel"></span></label>
+    
+</div>
+
+<div id="gapSliderBox" class="southwest" style="display:none;">
+    <h4>Retail Gap Filter</h4>
+    <div id="gapFilterSlider"></div>
+</div>
+
+<div id="clusterLegendBox" class="southeast" style="display: block;">
+    <h4>Cluster Types</h4>
+    <div id="clusterLegend"></div>
+</div>
+
+<div id="basemapButtons" class="southcenter">
+    <button id="defaultBtn" class="active">Default View</button>
+    <button id="satelliteBtn">Satellite View</button>
+</div>
+
+
+
+<!-- ✅ Load latest main.js with cache busting -->
+<script src="./js/main.js?v=1.0.5"></script>
+
+</body>
+</html>
